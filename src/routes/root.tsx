@@ -2,10 +2,10 @@ import Navbar from "../components/navbar";
 
 function Root() {
   return (
-    <div className="h-screen bg-home-mobile bg-cover  md:bg-home-tablet lg:bg-home-desktop">
+    <div className="h-screen w-screen bg-home-mobile bg-cover  md:bg-home-tablet lg:bg-home-desktop">
       <Navbar />
 
-      <main className="flex h-[calc(100vh-4.5rem)] flex-col justify-between px-6 py-8 lg:flex-row">
+      <main className="w-100vh flex h-[calc(100vh-4.5rem)] flex-col justify-between overflow-hidden px-6 py-8 lg:flex-row">
         <section className="flex flex-col justify-center gap-4 text-center align-middle">
           <h5 className="font-condensed text-[16px] uppercase tracking-[2.7px] text-gray md:text-[20px] md:tracking-[3.38px] lg:text-[28px] lg:tracking-[4.75px]">
             So you want to travel to

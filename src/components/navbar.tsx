@@ -21,12 +21,12 @@ function Navbar() {
   // const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
-    <header className="static flex flex-row justify-between p-4">
+    <header className="flex w-full flex-row justify-between p-4">
       <div>
         <img className="h-[40px] w-[40px]" src={logo} />
       </div>
 
-      <div className="">
+      <div>
         <input
           type="checkbox"
           id="drawer-toggle"
@@ -38,10 +38,8 @@ function Navbar() {
         >
           <img className="mx-auto" src={iconHamburger} />
         </label>
-        {/* <button className="h-[40px] w-[40px] lg:hidden">
-        </button> */}
 
-        <nav className="absolute right-0 top-0 h-[100vh] w-[254px] translate-x-[100%] transform bg-white bg-opacity-[4%] px-4 py-12 backdrop-blur-2xl transition-transform duration-200 peer-checked:translate-x-[0%]">
+        <nav className="fixed right-0 top-0 h-[100vh] w-[254px] translate-x-[100%] transform overflow-y-hidden overscroll-contain bg-white bg-opacity-[4%] px-4 py-12 backdrop-blur-2xl transition-transform duration-200 peer-checked:translate-x-[0%]">
           <label
             htmlFor="drawer-toggle"
             className="absolute right-6 top-6 inline-flex h-[20px] w-[20px] lg:hidden"
