@@ -17,7 +17,8 @@ function Destination() {
 
   return (
     <Layout>
-      <main className="flex h-[calc(100vh-4.5rem)] flex-col items-center gap-6 overflow-hidden px-6 py-8 lg:flex-row">
+      {/* <main className="flex h-[calc(100vh-4.5rem)] flex-col items-center gap-6 overflow-hidden px-6 py-8 lg:flex-row"> */}
+      <main className="flex flex-col items-center gap-6 overflow-hidden px-6 py-8 lg:flex-row">
         <Heading level="5">
           <span className="me-2 font-bold text-white text-opacity-[25%]">
             01
