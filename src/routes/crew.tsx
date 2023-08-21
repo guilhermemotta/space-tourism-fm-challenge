@@ -1,9 +1,10 @@
 import React from "react";
+
 import Heading from "../components/heading";
 import Layout from "../components/layout";
+import Text from "../components/text";
 
 import pageData from "../data.json";
-import Text from "../components/text";
 
 const { crew: crewData } = pageData;
 
@@ -29,7 +30,7 @@ function Crew() {
           <hr className="my-0 w-full border-t-[1px] border-[#383B4B]" />
         </div>
 
-        <div className="flex flex-row gap-4">
+        <div className="z-10 flex flex-row gap-4">
           {crewData.map((_, index) => (
             <span
               key={index}

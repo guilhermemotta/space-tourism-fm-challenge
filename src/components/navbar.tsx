@@ -16,7 +16,7 @@ function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="flex w-full flex-row justify-between p-4">
+    <header className="z-50 flex w-full flex-row justify-between p-4">
       <div>
         <img className="h-[40px] w-[40px]" src={logo} />
       </div>

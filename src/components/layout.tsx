@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+
 import Navbar from "./navbar";
 
 type LayoutProps = {
@@ -22,7 +23,9 @@ function Layout(props: LayoutProps) {
   ) as keyof typeof bgVariants;
 
   return (
-    <section className={`h-screen bg-cover ${bgVariants[bgToRender]}`}>
+    <section
+      className={`h-screen bg-cover lg:h-full ${bgVariants[bgToRender]} lg:pb-4`}
+    >
       <Navbar />
 
       {props.children}

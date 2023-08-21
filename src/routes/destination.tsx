@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 
 import Heading from "../components/heading";
 import Layout from "../components/layout";
@@ -9,7 +9,7 @@ import pageData from "../data.json";
 const { destinations: destinationsData } = pageData;
 
 function Destination() {
-  const [currentTabIndex, setCurrentTabIndex] = useState(0);
+  const [currentTabIndex, setCurrentTabIndex] = React.useState(0);
   const imageUrl = new URL(
     destinationsData[currentTabIndex].images.webp,
     import.meta.url

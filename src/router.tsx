@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "./routes/root";
 import Destination from "./routes/destination";
 import Crew from "./routes/crew";
+import Technology from "./routes/technology";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/crew",
     element: <Crew />,
+  },
+  {
+    path: "/technology",
+    element: <Technology />,
   },
 ]);
 
