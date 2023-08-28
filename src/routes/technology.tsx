@@ -26,11 +26,10 @@ function Technology() {
       </header>
       <article className="my-8 flex flex-col items-center gap-8 lg:ms-32 lg:flex-row">
         <div className="flex-auto lg:order-last">
-          <img className="lg:hidden" src={imagesUrl[0]} alt="" />
           <img
-            className="hidden max-h-full max-w-[505px] lg:block"
-            src={imagesUrl[1]}
-            alt=""
+            src={imagesUrl[0]}
+            srcSet={`${imagesUrl[0]} 768w, ${imagesUrl[1]} 515w`}
+            sizes="(min-width: 768px) 375px, (min-width: 1024px) 515px"
           />
         </div>
 
