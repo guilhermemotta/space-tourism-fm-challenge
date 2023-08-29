@@ -13,12 +13,16 @@ function NavButton(props: NavButtonProps) {
       <NavLink
         to={`/${props.label === "home" ? "" : props.label}`}
         className={({ isActive }) => {
-          let classes = "inline-block w-full py-1 pl-8";
-          classes += isActive ? " border-r-4 border-white" : "";
+          let classes =
+            "inline-block w-full py-1 pl-8 md:items-center md:py-10 md:pl-0";
+          classes += isActive
+            ? " border-r-4 border-white md:border-b-4 md:border-r-0"
+            : "";
           return classes;
         }}
       >
-        <span className="mr-2 font-bold">{props.index}</span> {props.label}
+        <span className="mr-2 font-bold md:hidden">{props.index}</span>{" "}
+        {props.label}
       </NavLink>
     </li>
   );

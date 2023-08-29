@@ -24,7 +24,7 @@ function Layout(props: LayoutProps) {
 
   return (
     <section
-      className={`h-screen bg-cover lg:h-full ${bgVariants[bgToRender]} lg:pb-4`}
+      className={`min-h-screen bg-cover text-center md:text-start lg:h-full ${bgVariants[bgToRender]} lg:pb-4`}
     >
       <Navbar />
 

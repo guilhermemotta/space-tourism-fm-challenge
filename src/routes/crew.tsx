@@ -17,17 +17,19 @@ function Crew() {
 
   return (
     <Layout>
-      <main className="flex flex-col items-center gap-8 px-6 py-8 lg:flex-row">
-        <Heading level="5">
-          <span className="me-2 font-bold text-white text-opacity-[25%]">
-            02
-          </span>
-          meet your crew
-        </Heading>
+      <Heading level="5">
+        <span className="me-2 font-bold text-white text-opacity-[25%]">02</span>
+        meet your crew
+      </Heading>
 
-        <div className="h-[223px] w-full">
-          <img className="mx-auto h-[223px]" src={imageUrl} alt="" />
-          <hr className="my-0 w-full border-t-[1px] border-[#383B4B]" />
+      <main className="mx-auto flex flex-col items-center gap-8 px-6 py-8 md:max-w-xl md:gap-10 md:py-16 md:pb-0 lg:flex-row">
+        <div className="h-[223px] w-full md:bottom-0 md:order-last md:h-auto md:w-[456px]">
+          <img
+            className="mx-auto h-[223px] md:h-auto md:w-[456px]"
+            src={imageUrl}
+            alt={`${crewData[currentTabIndex].name}'s picture`}
+          />
+          <hr className="my-0 w-full border-t-[1px] border-[#383B4B] md:hidden" />
         </div>
 
         <div className="z-10 flex flex-row gap-4">
@@ -42,11 +44,11 @@ function Crew() {
           ))}
         </div>
 
-        <section className="text-center">
-          <div className="font-serif text-[16px] uppercase text-gray">
+        <section className="text-center md:order-first">
+          <div className="font-serif text-[16px] uppercase text-gray md:text-[24px]">
             {crewData[currentTabIndex].role}
           </div>
-          <div className="mb-4 font-serif text-[24px] uppercase text-white">
+          <div className="mb-4 font-serif text-[24px] uppercase text-white md:text-[40px]">
             {crewData[currentTabIndex].name}
           </div>
 

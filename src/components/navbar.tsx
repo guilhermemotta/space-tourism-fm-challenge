@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import logo from "../assets/shared/logo.svg";
 import iconHamburger from "../assets/shared/icon-hamburger.svg";
@@ -16,10 +16,10 @@ function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="z-50 flex w-full flex-row justify-between p-4">
-      <div>
+    <header className="z-50 flex w-full flex-row justify-between ps-9 md:mb-10">
+      <Link to="/" className="py-6">
         <img className="h-[40px] w-[40px]" src={logo} />
-      </div>
+      </Link>
 
       <div>
         <input
@@ -29,20 +29,20 @@ function Navbar() {
         />
         <label
           htmlFor="drawer-toggle"
-          className="inline-flex appearance-none p-2"
+          className="inline-flex appearance-none px-6 py-8 md:hidden"
         >
           <img className="mx-auto" src={iconHamburger} />
         </label>
 
-        <nav className="fixed right-0 top-0 h-[100vh] w-[254px] translate-x-[100%] transform overflow-y-hidden overscroll-contain bg-white bg-opacity-[4%] py-12 backdrop-blur-2xl transition-transform duration-200 peer-checked:translate-x-[0%]">
+        <nav className="fixed right-0 top-0 z-50 h-[100vh] w-[254px] translate-x-[100%] transform overflow-y-hidden overscroll-contain bg-white bg-opacity-[4%] py-12 text-start backdrop-blur-2xl transition-transform duration-200 peer-checked:translate-x-[0%] md:relative md:right-auto md:top-auto md:h-full md:w-full md:translate-x-0 md:px-12 md:py-0">
           <label
             htmlFor="drawer-toggle"
-            className="absolute right-6 top-6 inline-flex h-[20px] w-[20px] lg:hidden"
+            className="absolute right-6 top-6 inline-flex h-[20px] w-[20px] md:hidden"
           >
             <img className="mx-auto" src={iconClose} />
           </label>
 
-          <ul className="mt-16 flex flex-col gap-8 lg:flex-row">
+          <ul className="mt-16 flex flex-col gap-8 md:mt-0 md:flex-row">
             {pages.map((page) => (
               <NavButton
                 key={`${page.index}-${page.route}`}

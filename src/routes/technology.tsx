@@ -16,7 +16,7 @@ function Technology() {
 
   return (
     <Layout>
-      <header className="text-center lg:ms-32 lg:text-start">
+      <header className="text-center md:text-start lg:ms-32">
         <Heading level="5">
           <span className="me-2 font-bold text-white text-opacity-[25%]">
             03
@@ -24,12 +24,14 @@ function Technology() {
           space launch 101
         </Heading>
       </header>
-      <article className="my-8 flex flex-col items-center gap-8 lg:ms-32 lg:flex-row">
+
+      <article className="flex flex-col items-center gap-8 py-8 md:gap-14 md:py-14 lg:ms-32 lg:flex-row">
         <div className="flex-auto lg:order-last">
           <img
             src={imagesUrl[0]}
             srcSet={`${imagesUrl[0]} 768w, ${imagesUrl[1]} 515w`}
-            sizes="(min-width: 768px) 375px, (min-width: 1024px) 515px"
+            sizes="(min-width: 768px) 768px, (min-width: 1024px) 515px"
+            className="w-screen md:h-[310px]"
           />
         </div>
 
@@ -41,7 +43,7 @@ function Technology() {
                 currentTabIndex === index
                   ? "bg-white text-black"
                   : "bg-transparent text-white"
-              } h-[40px] w-[40px] cursor-pointer rounded-full border border-white font-serif text-[18px]`}
+              } h-[40px] w-[40px] cursor-pointer rounded-full border border-white border-opacity-25 font-serif text-[18px] md:h-[60px] md:w-[60px] md:text-[24px]`}
               onClick={() => setCurrentTabIndex(index)}
             >
               {index + 1}
@@ -50,10 +52,10 @@ function Technology() {
         </div>
 
         <section className="mx-6 max-w-md text-center lg:text-start">
-          <div className="font-condensed text-[14px] uppercase tracking-[2.36px] text-gray">
+          <div className="font-condensed text-[14px] uppercase tracking-[2.36px] text-gray md:text-[16px] md:tracking-[2.7px]">
             the terminology...
           </div>
-          <div className="mb-4 font-serif text-[24px] uppercase text-white">
+          <div className="mb-4 font-serif text-[24px] uppercase text-white md:text-[40px]">
             {techData[currentTabIndex].name}
           </div>
 
