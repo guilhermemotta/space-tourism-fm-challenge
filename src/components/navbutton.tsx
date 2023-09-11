@@ -9,7 +9,7 @@ type NavButtonProps = {
 
 function NavButton(props: NavButtonProps) {
   return (
-    <li className="w-full font-condensed text-[16px] uppercase text-white">
+    <li className="w-full font-condensed text-[16px] uppercase text-white lg:w-auto">
       <NavLink
         to={`/${props.label === "home" ? "" : props.label}`}
         className={({ isActive }) => {
@@ -21,7 +21,9 @@ function NavButton(props: NavButtonProps) {
           return classes;
         }}
       >
-        <span className="mr-2 font-bold md:hidden">{props.index}</span>{" "}
+        <span className="mr-2 font-bold md:hidden lg:inline">
+          {props.index}
+        </span>{" "}
         {props.label}
       </NavLink>
     </li>

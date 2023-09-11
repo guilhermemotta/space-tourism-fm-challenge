@@ -1,9 +1,9 @@
 import React from "react";
+
 import Heading from "../components/heading";
 import Layout from "../components/layout";
-
-import pageData from "../data.json";
 import Text from "../components/text";
+import pageData from "../data.json";
 
 const { technology: techData } = pageData;
 

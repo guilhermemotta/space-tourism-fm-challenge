@@ -16,12 +16,12 @@ function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="z-50 flex w-full flex-row justify-between ps-9 md:mb-10">
+    <header className="z-50 flex w-full flex-row justify-between ps-9 md:mb-10 lg:pt-[40px]">
       <Link to="/" className="py-6">
         <img className="h-[40px] w-[40px]" src={logo} />
       </Link>
 
-      <div>
+      <div className="lg:min-w-[60%]">
         <input
           type="checkbox"
           id="drawer-toggle"
@@ -42,7 +42,7 @@ function Navbar() {
             <img className="mx-auto" src={iconClose} />
           </label>
 
-          <ul className="mt-16 flex flex-col gap-8 md:mt-0 md:flex-row">
+          <ul className="mt-16 flex flex-col gap-8 md:mt-0 md:flex-row lg:gap-12">
             {pages.map((page) => (
               <NavButton
                 key={`${page.index}-${page.route}`}
