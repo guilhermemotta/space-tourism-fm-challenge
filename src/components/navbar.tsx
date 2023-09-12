@@ -42,7 +42,7 @@ function Navbar() {
             <img className="mx-auto" src={iconClose} />
           </label>
 
-          <ul className="mt-16 flex flex-col gap-8 md:mt-0 md:flex-row lg:gap-12">
+          <ul className="mt-16 flex flex-col gap-8 md:mt-0 md:flex-row  lg:ml-20 lg:gap-12">
             {pages.map((page) => (
               <NavButton
                 key={`${page.index}-${page.route}`}
