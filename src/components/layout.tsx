@@ -28,7 +28,7 @@ function Layout(props: LayoutProps) {
     >
       <Navbar />
 
-      {props.children}
+      <div className="md:mx-[38px] lg:mx-[165px]">{props.children}</div>
     </section>
   );
 }

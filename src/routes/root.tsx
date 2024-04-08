@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
-import Heading from "../components/heading";
-import Layout from "../components/layout";
-import Text from "../components/text";
+import { Heading, Layout, Text } from "../components";
 
 function Root() {
   return (
     <Layout>
-      {/* TODO: Arrumar uma forma de manter o fim da barra de navegação alinhado com a página */}
       <main className="flex min-h-[calc(100vh-4.5rem)] flex-col items-center overflow-hidden px-6 py-8 md:gap-8 lg:mx-auto lg:min-h-min lg:max-w-5xl lg:flex-row lg:items-end lg:justify-between lg:overflow-auto">
         <section className="mb-8 flex flex-col justify-center gap-4 text-center align-middle md:max-w-md md:py-[106px] lg:mb-0 lg:py-0">
           <Heading level="5">So you want to travel to</Heading>
