@@ -24,7 +24,7 @@ function Destination() {
         pick your destination
       </Heading>
 
-      <main className="flex flex-col items-center overflow-hidden px-6 py-8 md:max-w-xl md:justify-between md:py-14 lg:flex-row">
+      <section className="flex flex-col items-center overflow-hidden px-6 py-8 md:max-w-xl md:justify-between md:py-14 lg:flex-row">
         <div className="h-[170px] w-[170px] md:h-[300px] md:w-[300px]">
           <img src={imageUrl} />
         </div>
@@ -75,7 +75,7 @@ function Destination() {
             </div>
           </section>
         </div>
-      </main>
+      </section>
     </Layout>
   );
 }
