@@ -16,7 +16,6 @@ function Technology() {
 
   return (
     <Layout>
-      {/* <header className="text-center md:text-start lg:ms-32"> */}
       <header className="text-center md:text-start">
         <Heading level="5">
           <span className="me-2 font-bold text-white text-opacity-[25%]">
@@ -26,7 +25,6 @@ function Technology() {
         </Heading>
       </header>
 
-      {/* <article className="flex flex-col items-center gap-8 py-8 md:gap-14 md:py-14 lg:ms-32 lg:flex-row"> */}
       <article className="flex flex-col items-center gap-8 py-8 md:gap-14 md:py-14 lg:flex-row">
         <div className="flex-auto lg:order-last">
           <img

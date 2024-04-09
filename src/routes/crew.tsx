@@ -22,7 +22,7 @@ function Crew() {
         meet your crew
       </Heading>
 
-      <main className="mx-auto flex flex-col items-center gap-8 px-6 py-8 md:max-w-xl md:gap-10 md:py-16 md:pb-0 lg:flex-row">
+      <section className="mx-auto flex flex-col items-center gap-8 px-6 py-8 md:max-w-xl md:gap-10 md:py-16 md:pb-0 lg:flex-row">
         <div className="h-[223px] w-full md:bottom-0 md:order-last md:h-auto md:w-[456px]">
           <img
             className="mx-auto h-[223px] md:h-auto md:w-[456px]"
@@ -54,7 +54,7 @@ function Crew() {
 
           <Text>{crewData[currentTabIndex].bio}</Text>
         </section>
-      </main>
+      </section>
     </Layout>
   );
 }

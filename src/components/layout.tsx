@@ -23,13 +23,13 @@ function Layout(props: LayoutProps) {
   ) as keyof typeof bgVariants;
 
   return (
-    <section
+    <div
       className={`min-h-screen bg-cover text-center md:text-start lg:h-full ${bgVariants[bgToRender]} lg:pb-4`}
     >
       <Navbar />
 
       <main className="md:mx-[38px] lg:mx-[165px]">{props.children}</main>
-    </section>
+    </div>
   );
 }
 
