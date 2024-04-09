@@ -1,9 +1,5 @@
 import React from "react";
 
-// import Heading from "../components/heading";
-// import Layout from "../components/layout";
-// import Text from "../components/text";
-
 import { Heading, Layout, Text } from "../components";
 
 import pageData from "../data.json";
@@ -24,13 +20,13 @@ function Destination() {
         pick your destination
       </Heading>
 
-      <section className="flex flex-col items-center overflow-hidden px-6 py-8 md:max-w-xl md:justify-between md:py-14 lg:flex-row">
+      <section className="flex flex-col items-center overflow-hidden px-6 py-8 md:mx-auto md:max-w-xl md:justify-between md:gap-5 md:px-0 md:py-14 xl:flex-row">
         <div className="h-[170px] w-[170px] md:h-[300px] md:w-[300px]">
           <img src={imageUrl} />
         </div>
 
         <div className="max-w-md flex-col">
-          <div className="mx-auto my-5 flex flex-row justify-center gap-4">
+          <div className="mx-auto my-5 flex flex-row justify-center gap-4 md:my-8">
             {destinationsData.map((dest, index) => (
               <div
                 key={index}
@@ -55,7 +51,7 @@ function Destination() {
 
           <hr className="mb-8 mt-8 w-full border-t-[1px] border-[#383B4B] md:mb-6 md:mt-12" />
 
-          <section className="flex w-full flex-col gap-8 md:flex-row lg:justify-start">
+          <section className="flex w-full flex-col justify-around gap-8 md:flex-row xl:justify-start">
             <div className="flex flex-col gap-3">
               <div className="text-center font-condensed text-[14px] uppercase tracking-[2.36px] text-gray">
                 AVG. DISTANCE

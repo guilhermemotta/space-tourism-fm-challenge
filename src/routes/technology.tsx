@@ -25,13 +25,13 @@ function Technology() {
         </Heading>
       </header>
 
-      <article className="flex flex-col items-center gap-8 py-8 md:gap-14 md:py-14 lg:flex-row">
+      <article className="flex flex-col items-center gap-7 py-8 md:gap-10 md:py-14 lg:flex-row">
         <div className="flex-auto lg:order-last">
           <img
             src={imagesUrl[0]}
             srcSet={`${imagesUrl[0]} 768w, ${imagesUrl[1]} 515w`}
             sizes="(min-width: 768px) 768px, (min-width: 1024px) 515px"
-            className="w-screen md:h-[310px]"
+            className="w-screen max-w-[100vw] md:h-[310px]"
           />
         </div>
 
@@ -52,7 +52,7 @@ function Technology() {
         </div>
 
         <section className="mx-6 max-w-md text-center lg:text-start">
-          <div className="font-condensed text-[14px] uppercase tracking-[2.36px] text-gray md:text-[16px] md:tracking-[2.7px]">
+          <div className="mb-[9px] font-condensed text-[14px] uppercase tracking-[2.36px] text-gray md:mb-[16px] md:text-[16px] md:tracking-[2.7px]">
             the terminology...
           </div>
           <div className="mb-4 font-serif text-[24px] uppercase text-white md:text-[40px]">

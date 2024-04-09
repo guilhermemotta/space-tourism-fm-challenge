@@ -18,10 +18,11 @@ function Navbar() {
   return (
     <header className="z-50 flex w-full flex-row justify-between ps-6 md:mb-10 md:ps-9 lg:pt-[40px]">
       <Link to="/" className="py-6">
-        <img className="h-[40px] w-[40px]" src={logo} />
+        <img className="h-[40px] w-[40px] md:h-[48px] md:w-[48px]" src={logo} />
       </Link>
 
-      <div className="lg:min-w-[60%]">
+      <div className="md:w-[60%]">
+        {/* <div className="md:min-w-[450px]"> */}
         <input
           type="checkbox"
           id="drawer-toggle"
@@ -42,7 +43,7 @@ function Navbar() {
             <img className="mx-auto" src={iconClose} />
           </label>
 
-          <ul className="mt-16 flex flex-col gap-8 md:mt-0 md:flex-row  lg:ml-20 lg:gap-12">
+          <ul className="mt-16 flex flex-col gap-8 md:mt-0 md:flex-row  md:justify-between lg:ml-20 lg:gap-12">
             {pages.map((page) => (
               <NavButton
                 key={`${page.index}-${page.route}`}
