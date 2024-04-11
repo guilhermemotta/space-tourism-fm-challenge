@@ -35,7 +35,8 @@ function Navbar() {
           <img className="mx-auto" src={iconHamburger} />
         </label>
 
-        <nav className="fixed right-0 top-0 z-50 h-[100vh] w-[254px] translate-x-[100%] transform overflow-y-hidden overscroll-contain bg-white bg-opacity-[4%] py-12 text-start backdrop-blur-2xl transition-transform duration-200 peer-checked:translate-x-[0%] md:relative md:right-auto md:top-auto md:h-full md:w-full md:translate-x-0 md:px-12 md:py-0">
+        {/* <nav className="fixed right-0 top-0 z-50 h-[100vh] w-[254px] translate-x-[100%] transform overflow-y-hidden overscroll-contain bg-white bg-opacity-[4%] py-12 text-start backdrop-blur-2xl transition-transform duration-200 peer-checked:translate-x-[0%] md:relative md:right-auto md:top-auto md:h-full md:w-full md:translate-x-0 md:px-12 md:py-0"> */}
+        <nav className="fixed right-0 top-0 z-50 h-[100vh] w-[254px] translate-x-[100%] transform overflow-y-hidden overscroll-contain bg-white bg-opacity-[4%] py-12 text-start backdrop-blur-2xl transition-transform duration-200 peer-checked:translate-x-[0%] md:relative md:right-auto md:top-auto md:h-full md:w-full md:translate-x-0 md:px-12 md:py-0 xl:p-0">
           <label
             htmlFor="drawer-toggle"
             className="absolute right-6 top-6 inline-flex h-[20px] w-[20px] md:hidden"
@@ -43,7 +44,7 @@ function Navbar() {
             <img className="mx-auto" src={iconClose} />
           </label>
 
-          <ul className="mt-16 flex flex-col gap-8 md:mt-0 md:flex-row  md:justify-between lg:ml-20 lg:gap-12">
+          <ul className="mt-16 flex flex-col gap-8 md:mt-0 md:flex-row  md:justify-between lg:ml-20 lg:gap-12 xl:ml-auto xl:justify-center">
             {pages.map((page) => (
               <NavButton
                 key={`${page.index}-${page.route}`}

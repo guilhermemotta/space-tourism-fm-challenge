@@ -28,7 +28,10 @@ function Layout(props: LayoutProps) {
     >
       <Navbar />
 
-      <main className="md:mx-[38px] xl:mx-[165px]">{props.children}</main>
+      {/* <main className="md:mx-[38px] xl:mx-[165px]">{props.children}</main> */}
+      <main className="flex justify-around md:mx-[38px] xl:mx-0">
+        {props.children}
+      </main>
     </div>
   );
 }

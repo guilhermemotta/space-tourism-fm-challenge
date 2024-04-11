@@ -13,7 +13,8 @@ function NavButton(props: NavButtonProps) {
         to={`/${props.label === "home" ? "" : props.label}`}
         className={({ isActive }) => {
           let classes =
-            "inline-block w-full py-1 pl-8 md:items-center md:py-10 md:pl-0";
+            "inline-block w-full py-1 pl-8 md:items-center md:py-9 md:pl-0";
+          // "inline-block w-full py-1 pl-8 md:items-center md:py-10 md:pl-0";
           classes += isActive
             ? " border-r-4 border-white md:border-b-4 md:border-r-0"
             : "";
