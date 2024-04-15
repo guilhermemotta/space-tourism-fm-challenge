@@ -15,63 +15,67 @@ function Destination() {
 
   return (
     <Layout>
-      <Heading level="5">
-        <span className="me-2 font-bold text-white text-opacity-[25%]">01</span>{" "}
-        pick your destination
-      </Heading>
+      <article className="flex flex-col xl:max-w-6xl">
+        <Heading level="5">
+          <span className="me-2 font-bold text-white text-opacity-[25%]">
+            01
+          </span>{" "}
+          pick your destination
+        </Heading>
 
-      <section className="flex flex-col items-center overflow-hidden px-6 py-8 md:mx-auto md:max-w-xl md:justify-between md:gap-5 md:px-0 md:py-14 xl:flex-row">
-        <div className="h-[170px] w-[170px] md:h-[300px] md:w-[300px]">
-          <img src={imageUrl} />
-        </div>
-
-        <div className="max-w-md flex-col">
-          <div className="mx-auto my-5 flex flex-row justify-center gap-4 md:my-8">
-            {destinationsData.map((dest, index) => (
-              <div
-                key={index}
-                className={`${
-                  currentTabIndex === index
-                    ? "border-b-2 border-white text-white"
-                    : "text-gray"
-                } cursor-pointer py-2 font-condensed text-[14px] uppercase tracking-[2.36px] md:text-[16px] md:tracking-[2.7px]`}
-                onClick={() => setCurrentTabIndex(index)}
-              >
-                {dest.name}
-              </div>
-            ))}
+        <section className="flex flex-col items-center overflow-hidden px-6 py-8 md:mx-auto md:max-w-xl md:justify-between md:gap-5 md:px-0 md:py-14 xl:min-w-full xl:max-w-6xl xl:flex-row xl:gap-24 xl:py-0">
+          <div className="h-[170px] w-[170px] md:h-[300px] md:w-[300px] xl:h-[445px] xl:w-[445px] xl:p-16">
+            <img src={imageUrl} />
           </div>
 
-          <div className="text-center">
-            <span className="font-serif text-[56px] uppercase text-white md:text-[80px]">
-              {destinationsData[currentTabIndex].name}
-            </span>
-            <Text>{destinationsData[currentTabIndex].description}</Text>
+          <div className="max-w-md flex-col">
+            <div className="mx-auto my-5 flex flex-row justify-center gap-4 md:my-8 xl:justify-start">
+              {destinationsData.map((dest, index) => (
+                <div
+                  key={index}
+                  className={`${
+                    currentTabIndex === index
+                      ? "border-opacity-100 text-white"
+                      : "border-opacity-0 text-gray hover:border-opacity-50"
+                  } cursor-pointer border-b-2 border-white py-2 font-condensed text-[14px] uppercase tracking-[2.36px] transition ease-in md:text-[16px] md:tracking-[2.7px]`}
+                  onClick={() => setCurrentTabIndex(index)}
+                >
+                  {dest.name}
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center xl:text-start">
+              <span className="font-serif text-[56px] uppercase text-white md:text-[80px] xl:justify-start">
+                {destinationsData[currentTabIndex].name}
+              </span>
+              <Text>{destinationsData[currentTabIndex].description}</Text>
+            </div>
+
+            <hr className="mb-8 mt-8 w-full border-t-[1px] border-[#383B4B] md:mb-6 md:mt-12" />
+
+            <section className="flex w-full flex-col justify-around gap-8 md:flex-row xl:justify-start xl:gap-20">
+              <div className="flex flex-col gap-3">
+                <div className="text-center font-condensed text-[14px] uppercase tracking-[2.36px] text-gray xl:text-start">
+                  AVG. DISTANCE
+                </div>
+                <div className="text-center font-serif text-[28px] uppercase text-white xl:text-start">
+                  {destinationsData[currentTabIndex].distance}
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                <div className="text-center font-condensed text-[14px] uppercase tracking-[2.36px] text-gray xl:text-start">
+                  EST. TRAVEL TIME
+                </div>
+                <div className="text-center font-serif text-[28px] uppercase text-white xl:text-start">
+                  {destinationsData[currentTabIndex].travel}
+                </div>
+              </div>
+            </section>
           </div>
-
-          <hr className="mb-8 mt-8 w-full border-t-[1px] border-[#383B4B] md:mb-6 md:mt-12" />
-
-          <section className="flex w-full flex-col justify-around gap-8 md:flex-row xl:justify-start">
-            <div className="flex flex-col gap-3">
-              <div className="text-center font-condensed text-[14px] uppercase tracking-[2.36px] text-gray">
-                AVG. DISTANCE
-              </div>
-              <div className="text-center font-serif text-[28px] uppercase text-white">
-                {destinationsData[currentTabIndex].distance}
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-3">
-              <div className="text-center font-condensed text-[14px] uppercase tracking-[2.36px] text-gray">
-                EST. TRAVEL TIME
-              </div>
-              <div className="text-center font-serif text-[28px] uppercase text-white">
-                {destinationsData[currentTabIndex].travel}
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
+        </section>
+      </article>
     </Layout>
   );
 }
