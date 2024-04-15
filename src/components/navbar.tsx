@@ -16,7 +16,7 @@ function Navbar() {
   const location = useLocation();
 
   return (
-    <header className="z-50 flex w-full flex-row justify-between ps-6 md:mb-10 md:ps-9 lg:pt-[40px]">
+    <header className="z-50 flex w-full flex-row justify-between ps-6 md:mb-10 md:ps-9 lg:pt-[40px] xl:ps-14">
       <Link to="/" className="py-6">
         <img className="h-[40px] w-[40px] md:h-[48px] md:w-[48px]" src={logo} />
       </Link>
