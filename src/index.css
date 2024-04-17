@@ -2,3 +2,95 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.grid-container {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+  padding-bottom: 4rem;
+}
+
+.grid-container--crew {
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+
+.grid-container--technology {
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+
+.grid-container > .title {
+  grid-area: title;
+}
+
+.grid-container > picture {
+  grid-area: image;
+  max-width: 60%;
+  /* border-bottom: 1px solid hsl(var(--tw-white) / 0.1); */
+}
+
+.grid-container > .crew-details {
+  grid-area: content;
+}
+
+.grid-container > .dot-indicators {
+  grid-area: tabs;
+}
+
+@media (min-width: 35em) {
+  .grid-container--crew {
+    padding-bottom: 0;
+    grid-template-areas:
+      "title"
+      "content"
+      "tabs"
+      "image";
+  }
+}
+
+@media (min-width: 45em) {
+  .grid-container {
+    text-align: left;
+    column-gap: 2rem;
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+        1rem,
+        1fr
+      );
+  }
+
+  .grid-container--crew {
+    grid-template-columns: minmax(0, 37rem) minmax(0, 23rem);
+    justify-items: start;
+    grid-template-areas:
+      "title title"
+      "content image"
+      "tabs image";
+  }
+
+  .grid-container--crew > picture {
+    grid-column: span 2;
+    align-self: end;
+    max-width: 90%;
+  }
+
+  .grid-container--technology {
+    grid-template-columns: minmax(0, 12rem) minmax(0, 23rem) minmax();
+    grid-template-areas:
+      "title title title"
+      "tabs content image";
+  }
+}
