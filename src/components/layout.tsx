@@ -24,14 +24,12 @@ function Layout(props: LayoutProps) {
 
   return (
     <div
-      className={`min-h-screen bg-cover text-center md:text-start lg:h-full ${bgVariants[bgToRender]} lg:pb-4`}
+      className={`min-h-screen bg-cover text-center md:text-start lg:h-full ${bgVariants[bgToRender]} lg:pb-4 xl:pb-0`}
     >
       <Navbar />
 
       {/* <main className="md:mx-[38px] xl:mx-[165px]">{props.children}</main> */}
-      <main className="flex justify-around md:mx-[38px] xl:mx-0">
-        {props.children}
-      </main>
+      <main className="md:mx-[38px] xl:mx-0 xl:ms-40">{props.children}</main>
     </div>
   );
 }

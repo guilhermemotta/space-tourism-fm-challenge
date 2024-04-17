@@ -1,8 +1,7 @@
 import React from "react";
 
-import Heading from "../components/heading";
-import Layout from "../components/layout";
-import Text from "../components/text";
+import { Heading, Layout, Text } from "../components";
+
 import pageData from "../data.json";
 
 const { technology: techData } = pageData;
@@ -16,26 +15,23 @@ function Technology() {
 
   return (
     <Layout>
-      <header className="text-center md:text-start">
-        <Heading level="5">
-          <span className="me-2 font-bold text-white text-opacity-[25%]">
-            03
-          </span>
-          space launch 101
-        </Heading>
-      </header>
+      <article className="grid-container grid-container--technology gap-4">
+        <header className="title text-center md:text-start">
+          <Heading level="5">
+            <span className="me-2 font-bold text-white text-opacity-[25%]">
+              03
+            </span>
+            space launch 101
+          </Heading>
+        </header>
 
-      <article className="flex flex-col items-center gap-7 py-8 md:gap-10 md:py-14 lg:flex-row">
-        <div className="flex-auto lg:order-last">
-          <img
-            src={imagesUrl[0]}
-            srcSet={`${imagesUrl[0]} 768w, ${imagesUrl[1]} 515w`}
-            sizes="(min-width: 768px) 768px, (min-width: 1024px) 515px"
-            className="w-screen max-w-[100vw] md:h-[310px]"
-          />
-        </div>
+        <picture>
+          <source media="(max-width: 768px)" srcSet={imagesUrl[0]} />
+          <source media="(min-width: 1024px)" srcSet={imagesUrl[1]} />
+          <img src={imagesUrl[1]} />
+        </picture>
 
-        <div className="flex flex-row gap-4 lg:order-first lg:flex-col">
+        <div className="tabs flex flex-row gap-4 lg:order-first lg:flex-col xl:gap-8">
           {techData.map((_, index) => (
             <button
               key={index}
@@ -43,7 +39,7 @@ function Technology() {
                 currentTabIndex === index
                   ? "bg-white text-black"
                   : "bg-transparent text-white"
-              } h-[40px] w-[40px] cursor-pointer rounded-full border border-white border-opacity-25 font-serif text-[18px] md:h-[60px] md:w-[60px] md:text-[24px]`}
+              } h-[40px] w-[40px] cursor-pointer rounded-full border border-white border-opacity-25 font-serif text-[18px] transition hover:border-opacity-100 md:h-[60px] md:w-[60px] md:text-[24px] xl:h-[80px] xl:w-[80px]`}
               onClick={() => setCurrentTabIndex(index)}
             >
               {index + 1}
@@ -51,11 +47,12 @@ function Technology() {
           ))}
         </div>
 
-        <section className="mx-6 max-w-md text-center lg:text-start">
-          <div className="mb-[9px] font-condensed text-[14px] uppercase tracking-[2.36px] text-gray md:mb-[16px] md:text-[16px] md:tracking-[2.7px]">
+        <section className="tech-details mx-6 max-w-md text-center lg:text-start xl:mx-0">
+          <div className="mb-[9px] font-condensed text-[14px] uppercase tracking-[2.36px] text-gray md:mb-[16px] md:text-[16px] md:tracking-[2.7px] xl:mb-[11px]">
             the terminology...
           </div>
-          <div className="mb-4 font-serif text-[24px] uppercase text-white md:text-[40px]">
+
+          <div className="mb-4 font-serif text-[24px] uppercase text-white md:text-[40px] xl:text-[56px]">
             {techData[currentTabIndex].name}
           </div>
 
