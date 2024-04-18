@@ -15,7 +15,7 @@ function Destination() {
 
   return (
     <Layout>
-      <article className="flex flex-col xl:max-w-6xl">
+      <article className="flex flex-col xl:max-w-6xl xl:pb-12">
         <Heading level="5">
           <span className="me-2 font-bold text-white text-opacity-[25%]">
             01
