@@ -2,9 +2,9 @@ import { Link, useLocation } from "react-router-dom";
 
 import NavButton from "./navbutton";
 
-import logo from "../assets/shared/logo.svg";
-import iconHamburger from "../assets/shared/icon-hamburger.svg";
-import iconClose from "../assets/shared/icon-close.svg";
+import logo from "../../assets/shared/logo.svg";
+import iconHamburger from "../../assets/shared/icon-hamburger.svg";
+import iconClose from "../../assets/shared/icon-close.svg";
 
 const pages = [
   { index: "00", route: "home" },

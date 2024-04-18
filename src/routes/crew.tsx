@@ -1,8 +1,6 @@
 import React from "react";
 
-import Heading from "../components/heading";
-import Layout from "../components/layout";
-import Text from "../components/text";
+import { Heading, Layout, Text } from "../components";
 
 import pageData from "../data.json";
 
