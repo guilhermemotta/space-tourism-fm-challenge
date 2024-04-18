@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+
 import { Heading, Layout, Text } from "../components";
 
 function Root() {
   return (
     <Layout>
-      <article className="xl:gap-18 flex min-h-[calc(100vh-4.5rem)] flex-col items-center overflow-hidden px-6 py-8 md:gap-8 xl:min-h-min xl:max-w-6xl xl:flex-row xl:items-end xl:justify-between xl:px-[4.5rem] xl:pb-[4.5rem]">
+      <article className="flex min-h-[calc(100vh-4.5rem)] flex-col items-center overflow-hidden px-6 py-8 md:gap-8 xl:min-h-min xl:max-w-6xl xl:flex-row xl:items-end xl:justify-between xl:gap-60 xl:px-[4.5rem] xl:pb-[4.5rem]">
         <section className="mb-8 flex flex-col justify-center gap-4 text-center align-middle md:max-w-md md:py-[106px] xl:mb-0 xl:py-0 xl:text-left">
           <Heading level="5">So you want to travel to</Heading>
 
