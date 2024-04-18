@@ -8,9 +8,9 @@ const { technology: techData } = pageData;
 
 function Technology() {
   const [currentTabIndex, setCurrentTabIndex] = React.useState(0);
-  const imagesUrl = [
-    new URL(techData[currentTabIndex].images.landscape, import.meta.url).href,
-    new URL(techData[currentTabIndex].images.portrait, import.meta.url).href,
+  const images = [
+    techData[currentTabIndex].images.landscape,
+    techData[currentTabIndex].images.portrait,
   ];
 
   return (
@@ -26,9 +26,9 @@ function Technology() {
         </header>
 
         <picture>
-          <source media="(max-width: 768px)" srcSet={imagesUrl[0]} />
-          <source media="(min-width: 1024px)" srcSet={imagesUrl[1]} />
-          <img src={imagesUrl[1]} />
+          <source media="(max-width: 768px)" srcSet={images[0]} />
+          <source media="(min-width: 1024px)" srcSet={images[1]} />
+          <img src={images[1]} />
         </picture>
 
         <div className="tabs flex flex-row gap-4 lg:order-first lg:flex-col xl:gap-8">

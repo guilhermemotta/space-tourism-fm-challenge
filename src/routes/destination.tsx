@@ -8,10 +8,6 @@ const { destinations: destinationsData } = pageData;
 
 function Destination() {
   const [currentTabIndex, setCurrentTabIndex] = React.useState(0);
-  const imageUrl = new URL(
-    destinationsData[currentTabIndex].images.webp,
-    import.meta.url
-  ).href;
 
   return (
     <Layout>
@@ -24,9 +20,13 @@ function Destination() {
         </Heading>
 
         <section className="flex flex-col items-center overflow-hidden px-6 py-8 md:mx-auto md:max-w-xl md:justify-around md:gap-5 md:px-0 md:py-14 xl:mx-0 xl:max-w-6xl xl:flex-row xl:gap-24 xl:py-0">
-          <div className="h-[170px] w-[170px] md:h-[300px] md:w-[300px] xl:h-fit xl:max-h-[445px] xl:w-fit xl:max-w-[445px] xl:p-16">
-            <img src={imageUrl} />
-          </div>
+          <picture className="h-[170px] w-[170px] md:h-[300px] md:w-[300px] xl:h-fit xl:max-h-[445px] xl:w-fit xl:max-w-[445px] xl:p-16">
+            <source
+              srcSet={destinationsData[currentTabIndex].images.webp}
+              type="image/webp"
+            />
+            <img src={destinationsData[currentTabIndex].images.png} />
+          </picture>
 
           <div className="max-w-md flex-col">
             <div className="mx-auto my-5 flex flex-row justify-center gap-4 md:my-8 xl:justify-start">

@@ -27,7 +27,6 @@ function Root() {
             EXPLORE
           </span>
         </Link>
-        {/* </span> */}
       </article>
     </Layout>
   );
