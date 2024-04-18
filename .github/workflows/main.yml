@@ -1,0 +1,46 @@
+# workflow simples para implantação de conteúdo estático no GitHub Pages
+name: Implantação do site do desafio no Pages
+
+on:
+  # Roda em pushes mirando no branch padrão
+  push:
+    branches: ['main']
+
+  # Permite que esse workflow rode manualmente através da aba Actions
+  workflow_dispatch:
+
+# Define as permissões do GITHUB_TOKEN para permitir a implantação no GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # Job único de implantação uma vez que é só o que está sendo feito
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Faz upload da pasta dist
+          path: './dist'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
