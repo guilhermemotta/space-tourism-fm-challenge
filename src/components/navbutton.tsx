@@ -13,10 +13,10 @@ function NavButton(props: NavButtonProps) {
         to={`/${props.label === "home" ? "" : props.label}`}
         className={({ isActive }) => {
           let classes =
-            "inline-block w-full py-1 pl-8 md:items-center md:py-9 md:pl-0";
+            "inline-block w-full border-r-4 border-white border-opacity-0 py-1 pl-8 transition md:items-center md:border-b-4 md:border-r-0 md:py-9 md:pl-0";
           classes += isActive
-            ? " border-r-4 border-white md:border-b-4 md:border-r-0"
-            : " border-white border-opacity-0 transition ease-in hover:border-r-4 hover:border-opacity-50 md:hover:border-b-4 md:hover:border-r-0";
+            ? " border-r-4 border-opacity-100 md:border-b-4 md:border-r-0"
+            : " hover:border-opacity-50";
           return classes;
         }}
       >
