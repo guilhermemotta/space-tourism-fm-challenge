@@ -19,18 +19,21 @@ function Crew() {
           meet your crew
         </Heading>
 
-        <picture>
-          <source
-            srcSet={crewData[currentTabIndex].images.webp}
-            type="image/webp"
-          />
-          <img
-            src={crewData[currentTabIndex].images.png}
-            alt={`${crewData[currentTabIndex].name}'s picture`}
-          />
-        </picture>
+        <section className="crew-image">
+          <picture className="mx-auto max-w-[60%] xl:max-w-[90%]">
+            <source
+              srcSet={crewData[currentTabIndex].images.webp}
+              type="image/webp"
+            />
 
-        <hr className="my-0 w-full border-t-[1px] border-[#383B4B] md:hidden" />
+            <img
+              src={crewData[currentTabIndex].images.png}
+              alt={`${crewData[currentTabIndex].name}'s picture`}
+            />
+          </picture>
+
+          <hr className="my-0 w-80 border-t-[1px] border-[#383B4B] md:hidden" />
+        </section>
 
         <div className="dot-indicators flex flex-row gap-4 xl:gap-6">
           {crewData.map((_, index) => (
@@ -38,7 +41,7 @@ function Crew() {
               key={index}
               className={`${
                 currentTabIndex === index ? "opacity-100" : "opacity-[17.44%]"
-              } h-[10px] w-[10px] cursor-pointer rounded-full bg-white transition-opacity hover:opacity-50 xl:h-[15px] xl:w-[15px]`}
+              } h-[10px] w-[10px] cursor-pointer rounded-full bg-white transition-opacity xl:h-[15px] xl:w-[15px] xl:hover:opacity-50`}
               onClick={() => setCurrentTabIndex(index)}
             ></span>
           ))}

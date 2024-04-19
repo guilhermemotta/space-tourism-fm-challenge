@@ -7,7 +7,6 @@ export type HeadingProps = {
 function Heading(props: HeadingProps) {
   if (props.level === "5") {
     return (
-      // <h5 className="font-condensed text-[16px] uppercase tracking-[2.7px] text-gray md:ps-9 md:text-[20px] md:tracking-[3.38px] lg:text-[28px] lg:tracking-[4.75px]">
       <h5
         className={`${props.className} font-condensed text-[16px] uppercase tracking-[2.7px] text-gray md:text-[20px] md:tracking-[3.38px] lg:text-[28px] lg:tracking-[4.75px]`}
       >

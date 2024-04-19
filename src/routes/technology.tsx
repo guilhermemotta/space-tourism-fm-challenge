@@ -15,7 +15,7 @@ function Technology() {
 
   return (
     <Layout>
-      <article className="grid-container grid-container--technology gap-4">
+      <article className="grid-container grid-container--technology gap-6">
         <header className="title text-center md:text-start">
           <Heading level="5">
             <span className="me-2 font-bold text-white text-opacity-[25%]">
@@ -25,7 +25,7 @@ function Technology() {
           </Heading>
         </header>
 
-        <picture>
+        <picture className="py-4">
           <source media="(max-width: 768px)" srcSet={images[0]} />
           <source media="(min-width: 1024px)" srcSet={images[1]} />
           <img src={images[1]} />

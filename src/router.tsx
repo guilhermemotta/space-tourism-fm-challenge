@@ -1,9 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import Root from "./routes/root";
-import Destination from "./routes/destination";
-import Crew from "./routes/crew";
-import Technology from "./routes/technology";
+import { Root, Destination, Crew, Technology } from "./routes";
 
 const router = createBrowserRouter(
   [
